@@ -16,12 +16,6 @@ A clean and lightweight mobile app built with **React Native & Expo** for tracki
 
 ---
 
-## Screenshots
-
-> _Add your screenshots here after building the app_
-
----
-
 ## Tech Stack
 
 - [React Native](https://reactnative.dev/)
