@@ -1,50 +1,153 @@
-# Welcome to your Expo app 👋
+# 🎾 Padel Scorer — Match Tracker for Friends
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean and lightweight mobile app built with **React Native & Expo** for tracking padel matches in real time. Designed for casual players who want a simple way to score and remember their games — no accounts, no internet required, just padel.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- 🏓 **Real padel scoring rules** — 15 / 30 / 40 / Deuce / Advantage / Tiebreak
+- ⚙️ **Customizable match setup** — Best of 3 or 5 sets, 1 / 3 / 5 games per set
+- ↩️ **Undo last point** — no more accidental taps ruining your score
+- 🏆 **Match summary** — winner announcement with final set scores
+- 📋 **Match history** — saved locally on your device
+- 🗑️ **Clear history** — reset all past matches anytime
+- 🌙 **Dark themed UI** — built for outdoor readability
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Screenshots
 
-In the output, you'll find options to open the app in a
+> _Add your screenshots here after building the app_
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Tech Stack
 
-## Get a fresh project
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/) & [Expo Router](https://expo.github.io/router/docs/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) — local data persistence
+- TypeScript
 
-When you're ready, run:
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS version)
+- [Expo Go](https://expo.dev/client) app on your phone (iOS or Android)
+
+### Installation
+
+1. **Clone the repository**
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/padel-scorer.git
+cd padel-scorer
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Install dependencies**
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. **Install AsyncStorage**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo install @react-native-async-storage/async-storage
+```
 
-## Join the community
+4. **Start the development server**
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+5. **Run on your phone**
+
+   - Open the **Expo Go** app on your phone
+   - Scan the QR code shown in the terminal
+   - Make sure your phone and PC are on the same WiFi
+
+---
+
+## How to Play
+
+1. Open the app and tap **+ New Match**
+2. Enter team or player names
+3. Select your match format:
+   - **Best of 3** or **Best of 5** sets
+   - **1, 3, or 5** games per set
+4. Tap the **team card** to add a point
+5. Use **↩ Undo** if you tap by mistake
+6. Match ends automatically — winner is announced on the summary screen
+7. All matches are saved to history on the home screen
+
+---
+
+## Building an APK (Android)
+
+To share the app with friends without the App Store:
+
+1. Install EAS CLI
+
+```bash
+npm install -g eas-cli
+```
+
+2. Login to your Expo account
+
+```bash
+eas login
+```
+
+3. Configure the build
+
+```bash
+eas build:configure
+```
+
+4. Build the APK
+
+```bash
+eas build -p android --profile preview
+```
+
+5. Download the APK from the link provided and share it via WhatsApp or any messenger. Friends will need to allow **"Install from unknown sources"** on their Android device.
+
+---
+
+## Project Structure
+
+```
+padel-scorer/
+├── app/
+│   ├── _layout.tsx      # Root navigation layout
+│   ├── index.tsx        # Home screen — match history
+│   ├── setup.tsx        # Match setup screen
+│   ├── score.tsx        # Live scoring screen
+│   └── summary.tsx      # Match summary screen
+├── package.json
+├── eas.json
+└── README.md
+```
+
+---
+
+## Contributing
+
+This app was built for personal use with friends, but feel free to fork it, improve it, and make it your own. Pull requests are welcome!
+
+---
+
+## License
+
+MIT — free to use and modify.
+
+---
+
+> Built with ❤️ for padel players who just want to keep score.
